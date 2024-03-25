@@ -1,0 +1,196 @@
+{
+	"info": {
+		"_postman_id": "bcbdfe52-c3c6-482d-a594-9d9f07988732",
+		"name": "Promart - Full Stack App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17093680"
+	},
+	"item": [
+		{
+			"name": "Clients",
+			"item": [
+				{
+					"name": "Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3333/clients/6484a9a5-902b-4684-8d31-b7353ce03051",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"clients",
+								"6484a9a5-902b-4684-8d31-b7353ce03051"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3333/clients/?id=&name=&surname=&page=2&per_page=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"clients",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": ""
+								},
+								{
+									"key": "name",
+									"value": ""
+								},
+								{
+									"key": "surname",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "2"
+								},
+								{
+									"key": "per_page",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Client 06\",\r\n    \"surname\": \"Client 06\",\r\n    \"mothers_surname\": \"\",\r\n    \"birthdate\": \"2020-12-11\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/clients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"clients"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Oscar\",\r\n    \"surname\": \"Quiroz\",\r\n    \"mothers_surname\": \"\",\r\n    \"email\": \"oscarquirozoch@gmail.com\",\r\n    \"birthdate\": \"2000-12-11\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3333/clients",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3333",
+									"path": [
+										"clients"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "content-length",
+									"value": "305"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 25 Mar 2024 22:08:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 201,\n    \"status\": \"CREATED\",\n    \"result\": {\n        \"name\": \"Oscar\",\n        \"surname\": \"Quiroz\",\n        \"mothers_surname\": null,\n        \"email\": \"oscarquirozoch@gmail.com\",\n        \"birthdate\": \"2000-12-11T00:00:00.000Z\",\n        \"id\": \"943256ea-b3ce-4297-8e76-8a1a13811d96\",\n        \"createdAt\": \"2024-03-25T22:08:04.051+00:00\",\n        \"updatedAt\": \"2024-03-25T22:08:04.051+00:00\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Oscar\",\r\n    \"surname\": \"Quiroz\",\r\n    \"mothers_surname\": \"\",\r\n    \"email\": \"oscarquirozoch@gmail.com\",\r\n    \"birthdate\": \"2000-12-11\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/clients/6484a9a5-902b-4684-8d31-b7353ce03051",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"clients",
+								"6484a9a5-902b-4684-8d31-b7353ce03051"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Client 06 (edit)",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
